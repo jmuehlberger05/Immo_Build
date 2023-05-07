@@ -317,6 +317,9 @@ main .parallax .parallax__image {
   -o-object-fit: cover;
      object-fit: cover;
 }
+main .slogan-section {
+  padding-block: 5rem;
+}
 main .slogan-section .slogan {
   font-size: 2.8rem;
   line-height: 1.1;
@@ -359,6 +362,9 @@ main .slogan-section > * {
 main .slider-section {
   margin-top: 2rem;
   margin-bottom: 10rem;
+}
+main .slider-section:nth-of-type(even) {
+  margin-top: 5rem;
 }
 main .slider {
   display: grid;
@@ -477,7 +483,7 @@ main .slider .active-slide .button-container {
 }
 main .house-section {
   margin-top: 5rem;
-  padding-bottom: 8rem;
+  padding-bottom: 5rem;
 }
 main .house-section h2 {
   margin-left: 10%;

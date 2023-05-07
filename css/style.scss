@@ -395,6 +395,8 @@ main {
   }
 
   .slogan-section {
+    padding-block: 5rem;
+
     .slogan {
       font-size: 2.8rem;
       // text-transform: uppercase;
@@ -447,6 +449,10 @@ main {
   .slider-section {
     margin-top: 2rem;
     margin-bottom: 10rem;
+
+    &:nth-of-type(even) {
+      margin-top: 5rem;
+    }
   }
 
   .slider {
@@ -604,7 +610,7 @@ main {
 
   .house-section {
     margin-top: 5rem;
-    padding-bottom: 8rem;
+    padding-bottom: 5rem;
 
     h2 {
       margin-left: 10%;
