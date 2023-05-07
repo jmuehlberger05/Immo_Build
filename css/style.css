@@ -114,14 +114,14 @@ body {
 .dropdown-btn:hover .dropdown-btn__arrow > path {
   stroke: var(--clr-secondary-100);
 }
-.dropdown-btn[data-active="true"] {
+.dropdown-btn[data-active=true] {
   background-color: var(--clr-primary-900);
 }
-.dropdown-btn[data-active="true"] .dropdown-btn__arrow {
+.dropdown-btn[data-active=true] .dropdown-btn__arrow {
   transform: rotate(180deg);
   padding-bottom: 0.1rem;
 }
-.dropdown-btn[data-active="true"] .dropdown-btn__arrow > path {
+.dropdown-btn[data-active=true] .dropdown-btn__arrow > path {
   stroke: var(--clr-secondary-100);
 }
 
@@ -172,10 +172,10 @@ header .hamburger .hamburger__line {
 header .hamburger:hover {
   gap: 0.8rem;
 }
-header .hamburger[data-active="true"] {
+header .hamburger[data-active=true] {
   gap: 0;
 }
-header .hamburger[data-active="true"] .hamburger__line {
+header .hamburger[data-active=true] .hamburger__line {
   height: 0.05rem;
   transition-delay: 128ms;
 }
@@ -190,7 +190,7 @@ header .hamburger[data-active="true"] .hamburger__line {
     padding-inline: calc(var(--padding-inline-1) * 0.5);
     background-color: rgba(255, 255, 255, 0.9);
     -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
     transform: translateY(-150%);
     transition: var(--transition-medium);
     z-index: -1;
@@ -210,12 +210,7 @@ header .hamburger[data-active="true"] .hamburger__line {
     transition-delay: 500ms;
     text-align: center;
   }
-  header
-    .mobile-navigation
-    li:last-of-type
-    header
-    .mobile-navigation
-    li:not(:last-of-type())::after {
+  header .mobile-navigation li:last-of-type header .mobile-navigation li:not(:last-of-type())::after {
     content: "";
     position: absolute;
     display: block;
@@ -275,7 +270,7 @@ main section:not(.slider-section) {
 }
 main .hero-section {
   -webkit-padding-before: calc(5rem + var(--header-height));
-  padding-block-start: calc(5rem + var(--header-height));
+          padding-block-start: calc(5rem + var(--header-height));
 }
 main .hero-section h1 {
   text-transform: uppercase;
@@ -313,7 +308,7 @@ main .parallax .parallax__image {
   margin-top: -2rem;
   height: 120%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 main .slogan-section .slogan {
   font-size: 2.8rem;
@@ -327,7 +322,7 @@ main .slogan-section > * {
 @media (max-width: 40em) {
   main .hero-section {
     -webkit-padding-before: calc(3rem + var(--header-height));
-    padding-block-start: calc(3rem + var(--header-height));
+            padding-block-start: calc(3rem + var(--header-height));
   }
   main .hero-section .hero-section__content {
     margin-left: 0%;
@@ -344,7 +339,7 @@ main .slogan-section > * {
     margin-top: -2rem;
     height: 120%;
     -o-object-fit: cover;
-    object-fit: cover;
+       object-fit: cover;
   }
   main .slogan-section > * {
     margin-left: 0%;
@@ -572,7 +567,7 @@ main .house-section .right .house__details {
   grid-column: 1/2;
   grid-row: 1/2;
   -webkit-padding-start: 0;
-  padding-inline-start: 0;
+          padding-inline-start: 0;
 }
 main .house-section .right .house__details::before {
   display: none;
@@ -673,7 +668,6 @@ main .faq-section .faq .faq__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 1rem;
 }
 main .faq-section .faq .faq__header .faq-header__title {
   font-size: calc(var(--fs-primary) + 0.2rem);
@@ -681,12 +675,18 @@ main .faq-section .faq .faq__header .faq-header__title {
   padding-top: 0.2rem;
 }
 main .faq-section .faq .faq__answer {
-  transition: var(--transition-medium);
-  display: none;
+  transition: var(--transition-short);
+  position: relative;
+  height: 0;
   overflow: hidden;
+  padding-top: 0rem;
+}
+main .faq-section .faq-active .faq-header {
+  margin-bottom: 1rem;
 }
 main .faq-section .faq-active .faq__answer {
-  display: block;
+  padding-top: 1rem;
+  height: 100%;
 }
 @media (max-width: 60em) {
   main .faq-section {
@@ -723,6 +723,7 @@ main .faq-section .faq-active .faq__answer {
     display: block;
   }
 }
+/*  Dark Mode  */
 @media (prefers-color-scheme: dark) {
   :root {
     --clr-primary-900: #faf6f6;
@@ -732,4 +733,4 @@ main .faq-section .faq-active .faq__answer {
   .dropdown-btn__arrow > path {
     stroke: var(--clr-primary-900);
   }
-} /*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

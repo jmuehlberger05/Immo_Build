@@ -118,6 +118,7 @@ body {
 
 .dropdown-btn {
   width: 1.5rem;
+  height: 1.5rem;
   aspect-ratio: 1;
   border-radius: 50%;
   border: var(--border-style-1);
@@ -833,7 +834,7 @@ main {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-bottom: 1rem;
+        // padding-bottom: 1rem;
 
         .faq-header__title {
           font-size: calc(var(--fs-primary) + 0.2rem);
@@ -843,17 +844,23 @@ main {
       }
 
       .faq__answer {
-        transition: var(--transition-medium);
-        // position: absolute;
-        // margin-top: -11%;
-        display: none;
+        transition: var(--transition-short);
+        position: relative;
+        height: 0;
         overflow: hidden;
+        padding-top: 0rem;
       }
     }
     .faq-active {
+      .faq-header {
+        margin-bottom: 1rem;
+      }
+
       .faq__answer {
         // margin-top: 0%;
-        display: block;
+        // display: block;
+        padding-top: 1rem;
+        height: 100%;
       }
     }
   }
@@ -899,6 +906,8 @@ main {
     display: block;
   }
 }
+
+/*  Dark Mode  */
 
 @media (prefers-color-scheme: dark) {
   :root {
