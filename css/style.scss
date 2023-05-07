@@ -435,6 +435,8 @@ main {
       }
     }
     .slogan-section {
+      padding-block: 0rem;
+
       & > * {
         margin-left: 0%;
       }
@@ -877,7 +879,7 @@ main {
 
   @media (max-width: $break-width-tablet) {
     .faq-section {
-      padding-block: 5rem 10rem;
+      padding-block: 0rem 10rem;
 
       h2 {
         display: block;

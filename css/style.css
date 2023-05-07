@@ -352,6 +352,9 @@ main .slogan-section > * {
     -o-object-fit: cover;
        object-fit: cover;
   }
+  main .slogan-section {
+    padding-block: 0rem;
+  }
   main .slogan-section > * {
     margin-left: 0%;
   }
@@ -700,7 +703,7 @@ main .faq-section .faq-active .faq__answer {
 }
 @media (max-width: 60em) {
   main .faq-section {
-    padding-block: 5rem 10rem;
+    padding-block: 0rem 10rem;
   }
   main .faq-section h2 {
     display: block;
