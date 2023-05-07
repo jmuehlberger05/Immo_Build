@@ -428,9 +428,16 @@
               </div>
               <div class="faq__answer">
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
-                  laudantium odit reiciendis pariatur, quos corporis ea illum
-                  quidem! Eveniet, quo?
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                  diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                  aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                  justo duo dolores et ea rebum. Stet clita kasd gubergren, no
+                  sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
+                  ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                  nonumy eirmod tempor invidunt ut labore et dolore magna
+                  aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                  justo duo dolores et ea rebum. Stet clita kasd gubergren, no
+                  sea takimata sanctus est Lorem ipsum dolor sit amet.
                 </p>
               </div>
             </div>
@@ -460,9 +467,11 @@
               </div>
               <div class="faq__answer">
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
-                  laudantium odit reiciendis pariatur, quos corporis ea illum
-                  quidem! Eveniet, quo?
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                  diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                  aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                  justo duo dolores et ea rebum. Stet clita kasd gubergren, no
+                  sea takimata sanctus est Lorem ipsum dolor sit amet.
                 </p>
               </div>
             </div>
@@ -498,6 +507,57 @@
                 </p>
               </div>
             </div>
+
+            <!-- Faq 4 -->
+            <div class="faq">
+              <div class="faq__header">
+                <h3 class="faq-header__title">Wie groß sind die Wohnungen?</h3>
+                <button class="dropdown-btn faq-ddb" data-active="false">
+                  <svg
+                    class="dropdown-btn__arrow"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="7"
+                    viewBox="0 0 10 7"
+                    fill="none"
+                  >
+                    <path
+                      d="M1.46997 5.26023L4.99997 1.74023L8.52997 5.26023"
+                      stroke="black"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="faq__answer">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+                  laudantium odit reiciendis pariatur, quos corporis ea illum
+                  quidem! Eveniet, quo?
+                </p>
+              </div>
+            </div>
+
+            <div class="button-container">
+              <!-- Outlined Button -->
+              <a class="btn btn-outline" href="./index.html">
+                <div class="btn-text">
+                  <div>Mehr FAQ</div>
+                  <div>Mehr FAQ</div>
+                </div>
+              </a>
+
+              <!-- Filled Button -->
+              <a class="btn btn-filled-icon" href="./contact.html">
+                <div class="btn-text">
+                  <div>Jetzt direkt anfragen</div>
+                  <div>Jetzt direkt anfragen</div>
+                </div>
+                <img class="btn-icon" src="./icons/arrow-right.svg" alt="" />
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -528,7 +588,15 @@
         btn.addEventListener("click", () => {
           const active = btn.dataset.active === "true";
           btn.dataset.active = !active;
+          var content =
+            btn.parentElement.parentElement.querySelector(".faq__answer");
           btn.parentElement.parentElement.classList.toggle("faq-active");
+
+          if (active) {
+            content.style.maxHeight = null;
+          } else {
+            content.style.maxHeight = content.scrollHeight + 20 + "px";
+          }
         });
       });
     </script>
